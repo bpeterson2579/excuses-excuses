@@ -9,9 +9,16 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    
+  }
+
   render() {
     return(
-      <h1>Hello World</h1>
+      <>
+        <h1>Hello World</h1>
+        <img src={require('../assets/Excuses.png')} />
+      </>
     )
   }
 }
