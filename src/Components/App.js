@@ -1,5 +1,6 @@
 import '../CSS/App.css';
 import React, { Component } from 'react';
+import Form from './Form';
 
 class App extends Component {
   constructor() {
@@ -9,16 +10,13 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-    
-  }
-
   render() {
     return(
-      <>
-        <h1>Hello World</h1>
-        <img src={require('../assets/Excuses.png')} />
-      </>
+      <main>
+        <img className='background' src={require('../assets/Excuses.png')} />
+        <h1>Excuses, Excuses</h1>
+        <Form />
+      </main>
     )
   }
 }
