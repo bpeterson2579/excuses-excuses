@@ -69,3 +69,7 @@ button:hover {
   transition: .2s;
   transform: scale(1.1);
 }
+
+.go-home {
+  width: 20vw;
+}

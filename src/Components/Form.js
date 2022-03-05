@@ -1,5 +1,6 @@
 import '../CSS/Form.css';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Form extends Component {
   constructor() {
@@ -36,6 +37,9 @@ class Form extends Component {
           </label>
           <button className='submit-button'>Submit</button>
         </div>
+        <Link to='/'>
+          <button className='go-home'>Go Home</button>
+        </Link>
       </section>
     )
   }
