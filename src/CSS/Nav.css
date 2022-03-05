@@ -1,0 +1,10 @@
+.nav-container {
+  display: flex;
+}
+
+.nav-button {
+  margin: 25px 50px;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: rgb(167, 164, 164);
+}
