@@ -14,16 +14,28 @@ class Form extends Component {
   render() {
     return(
       <section className='form'>
-        <label>Specific Excuse
-          <input type='number' className='excuseId' />
-        </label>
+        <div className='excuse-field'>
+          <label>Specific Excuse ID:
+            <input type='number' className='excuse-input' />
+          </label>
+          <button className='submit-button'>Submit</button>
+        </div>
         <h2>OR</h2>
-        <label>Number of Excuses needed:
-          <input type='number' className='numOfExcusesInput'/>
-        </label>
-        <label>Category of Excuse:
-          <input type='text' className='categoryInput'/>
-        </label>
+        <div className='excuse-field'>
+          <label>Number of Excuses needed:
+            <input type='number' min='1' max='10' className='excuse-input'/>
+          </label>
+          <label>Category of Excuse:
+            <select className='category-input'>
+              <option value='family'>Family</option>
+              <option value='office'>Office</option>
+              <option value='children'>Children</option>
+              <option value='college'>College</option>
+              <option value='party'>Party</option>
+            </select>
+          </label>
+          <button className='submit-button'>Submit</button>
+        </div>
       </section>
     )
   }
