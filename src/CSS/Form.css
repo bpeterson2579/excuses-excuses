@@ -57,14 +57,17 @@ select {
   border-radius: 10px;
 }
 
-button {
+.submit-button,
+.go-home,
+.disabled-button {
   font-size: 30px;
   width: 10vw;
   border-radius: 10px;
   cursor: pointer;
 }
 
-button:hover {
+.submit-button:hover,
+.go-home:hover {
   background-color: rgb(126, 237, 237);
   transition: .2s;
   transform: scale(1.1);

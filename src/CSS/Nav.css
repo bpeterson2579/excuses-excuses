@@ -1,10 +1,19 @@
 .nav-container {
   display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: rgb(167, 164, 164);
+  margin-top: 40px;
+  width: 50%;
+}
+
+.nav-div {
+  margin: 25px 50px;
+  padding: 24px;
 }
 
 .nav-button {
-  margin: 25px 50px;
-  padding: 24px;
-  border-radius: 20px;
-  background-color: rgb(167, 164, 164);
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
 }
