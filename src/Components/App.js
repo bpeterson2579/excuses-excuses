@@ -16,7 +16,9 @@ class App extends Component {
   }
 
   addToFavorites = (newFav) => {
-    this.setState({favExcuses: [...this.state.favExcuses, newFav]})
+    if(!this.state.favExcuses.includes(newFav)) {
+      this.setState({favExcuses: [...this.state.favExcuses, newFav]})
+    }
   }
 
   render() {

@@ -1,0 +1,19 @@
+{
+  "excuses": [
+    {
+      "id": 410,
+      "excuse": "That was today? I'm very sorry guys, but I promised my wife that we'd do a date night tonight.",
+      "category": "party"
+    },
+    {
+      "id": 2,
+      "excuse": "My boss was in a meeting and I had to take his place.",
+      "category": "family"
+    },
+    {
+      "id": 5,
+      "excuse": "Can't find my keys",
+      "category": "family"
+    }
+  ]
+}
