@@ -11,7 +11,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      favExcuses: []
+      favExcuses: [
+        {
+          "id": 406,
+          "excuse": "My team just had our work schedules change, and I'm set to go in at 6 AM tomorrow.",
+          "category": "party"
+          }
+      ]
     }
   }
 
@@ -36,7 +42,7 @@ class App extends Component {
           <Route exact path='/' element={<Nav />} />
           <Route path='/form' element={<Form />} />
           <Route path='/favorites' element={<Favorites favExcuses={this.state.favExcuses}/>} />
-          <Route path='/excuses/:excuseAmount-:category' element={<ExcuseDisplay addToFavorites={this.addToFavorites} removeFromFavorites={this.removeFromFavorites}/>} />
+          <Route path='/excuses/:excuseAmount-:category' element={<ExcuseDisplay favExcuses={this.state.favExcuses} addToFavorites={this.addToFavorites} removeFromFavorites={this.removeFromFavorites}/>} />
           <Route path='*' element={<Error />} />
         </Routes>
       </main>

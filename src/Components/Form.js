@@ -19,9 +19,6 @@ class Form extends Component {
   render() {    
     return(
       <section className='form'>
-        <Link to='/'>
-          <button className='go-home'>Go Home</button>
-        </Link>
         <section className='excuse-field'>
           <label>Number of Excuses needed:
             <input type='number' min='1' max='10' name='excuseAmount' className='excuse-input' value={this.state.excuseAmount} onChange={event => this.handleChange(event)} required='required'/>
@@ -43,6 +40,9 @@ class Form extends Component {
             </Link>
           : <button className='disabled-button' disabled>Submit</button>}
         </section>
+        <Link to='/'>
+          <button className='go-home'>Go Home</button>
+        </Link>
       </section>
     )
   }

@@ -1,11 +1,12 @@
 import '../CSS/ExcuseDisplay.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchCategoryExcuse, fetchRandomNumOfCategoryExcuses, fetchRandomNumOfExcuses } from '../apiCalls/apiCalls'
+import { fetchCategoryExcuse, fetchRandomNumOfCategoryExcuses, fetchRandomNumOfExcuses } from '../apiCalls/apiCalls';
+import ExcuseCard from './ExcuseCard';
 
 class ExcuseDisplay extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       excuses: [],
       error: ''
@@ -34,11 +35,30 @@ class ExcuseDisplay extends Component {
   showExcuses = () => {
     return this.state.excuses.map((excuse, index) => {
       return(
-        <section className='excuse'>
-          <p>{index + 1}) {excuse.excuse}</p>
-        </section>
+        <ExcuseCard 
+          excuses={excuse.excuse}
+          category={excuse.category}
+          id={excuse.id}
+          key={excuse.id}
+          index={index + 1}
+          addToFavorites={this.props.addToFavorites} 
+          removeFromFavorites={this.props.removeFromFavorites}
+          favExcuses={this.props.favExcuses}
+        />
       )
     })
+  }
+
+  showProperStar = () => {
+    const excuseText = this.props.favExcuses.map(excuse => {
+      return excuse.excuse
+    })
+
+    if(excuseText.includes()) {
+      return <button className='fav-star' onClick={() => this.props.removeFromFavorites()}>★</button>
+    }else {
+      return <button className='not-fav-star' onClick={() => this.props.addToFavorites()}>✩</button>
+    }
   }
 
   render() {
@@ -50,7 +70,7 @@ class ExcuseDisplay extends Component {
           </section>
         : <p className='error'>You clearly don't need an excuse as you did not ask for any amount of them!</p>}
         <Link to='/form'>
-          <button>Go Back</button>
+          <button className='go-home'>Go Back</button>
         </Link>
       </>
     )

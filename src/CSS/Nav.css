@@ -17,3 +17,9 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.nav-button:hover {
+  background-color: rgb(126, 237, 237);
+  transition: .2s;
+  transform: scale(1.1);
+}
