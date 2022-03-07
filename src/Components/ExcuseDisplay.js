@@ -41,24 +41,19 @@ class ExcuseDisplay extends Component {
           id={excuse.id}
           key={excuse.id}
           index={index + 1}
-          showProperStar={this.showProperStar}
+          addToFavorites={this.props.addToFavorites}
+          removeExcuse={this.removeExcuse}
         />
       )
     })
   }
 
-  showProperStar = (exc) => {
-    const excuseText = this.props.favExcuses.map(excuse => {
-      console.log(exc)
-      console.log(excuse.excuse)
-      return excuse.excuse
+  removeExcuse = (id) => {
+    const filteredFavorites = this.state.excuses.filter(excuse => {
+      return excuse.id !== id;
     })
 
-    if(excuseText.includes(exc)) {
-      return <button className='fav-star' onClick={() => this.props.removeFromFavorites()}>★</button>
-    }else {
-      return <button className='not-fav-star' onClick={() => this.props.addToFavorites()}>✩</button>
-    }
+    this.setState({ excuses: filteredFavorites})
   }
 
   render() {

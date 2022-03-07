@@ -7,12 +7,12 @@ const Nav = () => {
     <section className='nav-container'>
       <Link to='/form'>
         <div className='nav-div'>
-          <button className='nav-button'>Generate Quote</button>
+          <button className='nav-button' id='generateQuote'>Generate Quote</button>
         </div>
       </Link>
       <Link to='/favorites'>
         <div className='nav-div'>
-          <button className='nav-button'>View Favorites</button>
+          <button className='nav-button' id='viewFavorites'>View Favorites</button>
         </div>
       </Link>
     </section>
