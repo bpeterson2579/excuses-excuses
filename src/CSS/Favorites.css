@@ -1,0 +1,25 @@
+.fav-excuse-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin-bottom: 26px;
+  border-radius: 20px;
+  background-color: rgb(167, 164, 164);
+}
+
+h3 {
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin: 0px;
+  margin-bottom: 26px;
+  border-radius: 20px;
+  background-color: rgb(167, 164, 164);
+}
+
+.fav-category {
+  font-size: 24px;
+  padding: 0px;
+  margin: 0px;
+}

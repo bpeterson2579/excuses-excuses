@@ -16,7 +16,7 @@ class App extends Component {
           "id": 406,
           "excuse": "My team just had our work schedules change, and I'm set to go in at 6 AM tomorrow.",
           "category": "party"
-          }
+        }
       ]
     }
   }
