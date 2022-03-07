@@ -41,6 +41,7 @@ class ExcuseDisplay extends Component {
           id={excuse.id}
           key={excuse.id}
           index={index + 1}
+          addToFavorites={this.props.addToFavorites}
           removeExcuse={this.removeExcuse}
         />
       )
