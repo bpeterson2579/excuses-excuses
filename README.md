@@ -21,6 +21,11 @@ My goal was to build a React app that allows users to generate excuses for many 
   - Cypress
 
 ## Illustrations
+![Landing Page](src/assets/landing.png)
+
+![Form](src/assets/form.png)
+
+![Excuse Results](src/assets/excuse-results.png)
 
 ## Install + Setup
   - Clone this [repo](https://github.com/bpeterson2579/excuses-excuses) to your machine.
