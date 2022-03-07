@@ -36,25 +36,25 @@ class ExcuseDisplay extends Component {
     return this.state.excuses.map((excuse, index) => {
       return(
         <ExcuseCard 
-          excuses={excuse.excuse}
+          excuse={excuse.excuse}
           category={excuse.category}
           id={excuse.id}
           key={excuse.id}
           index={index + 1}
-          addToFavorites={this.props.addToFavorites} 
-          removeFromFavorites={this.props.removeFromFavorites}
-          favExcuses={this.props.favExcuses}
+          showProperStar={this.showProperStar}
         />
       )
     })
   }
 
-  showProperStar = () => {
+  showProperStar = (exc) => {
     const excuseText = this.props.favExcuses.map(excuse => {
+      console.log(exc)
+      console.log(excuse.excuse)
       return excuse.excuse
     })
 
-    if(excuseText.includes()) {
+    if(excuseText.includes(exc)) {
       return <button className='fav-star' onClick={() => this.props.removeFromFavorites()}>★</button>
     }else {
       return <button className='not-fav-star' onClick={() => this.props.addToFavorites()}>✩</button>
