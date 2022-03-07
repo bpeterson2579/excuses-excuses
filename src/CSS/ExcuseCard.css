@@ -1,0 +1,30 @@
+.excuse-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.excuse-text {
+  font-size: 18px;
+}
+
+.fav-star,
+.not-fav-star {
+  height: 50%;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  transform: scale(2);
+  margin-left: 20px;
+}
+
+.not-fav-star {
+  transform: scale(2.5)
+}
+
+.fav-star:hover,
+.not-fav-star:hover {
+  -webkit-text-stroke: 1px rgb(126, 237, 237);
+  transition: .5s;
+  transform: scale(2.5);
+}

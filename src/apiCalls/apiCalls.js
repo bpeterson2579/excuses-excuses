@@ -4,12 +4,6 @@ const fetchRandomExcuse = async() => {
   return data
 }
 
-const fetchSpecificExcuse = (id) => {
-  const response = await fetch(`https://excuser.herokuapp.com/v1/excuse/id/${id}`)
-  const data = await response.json()
-  return data
-}
-
 const fetchRandomNumOfExcuses = async(num) => {
   const response = await fetch(`https://excuser.herokuapp.com/v1/excuse/${num}`)
   const data = await response.json()
@@ -28,4 +22,4 @@ const fetchRandomNumOfCategoryExcuses = async(category, num) => {
   return data
 }
 
-export {fetchRandomExcuse, fetchSpecificExcuse, fetchRandomNumOfExcuses, fetchCategoryExcuse, fetchRandomNumOfCategoryExcuses}
+export {fetchRandomExcuse, fetchRandomNumOfExcuses, fetchCategoryExcuse, fetchRandomNumOfCategoryExcuses}
