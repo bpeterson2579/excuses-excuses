@@ -37,6 +37,7 @@ My goal was to build a React app that allows users to generate excuses for many 
 
 ## Contributors
   - [Brian Peterson](https://github.com/bpeterson2579)
+  - [![Brian's GitHub stats](https://github-readme-stats.vercel.app/api?username=bpeterson2579)](https://github.com/anuraghazra/github-readme-stats)
 
 ## Wins
   - Designed, built, and tested a React app from start to finish alone. 
